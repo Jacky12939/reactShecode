@@ -3,6 +3,7 @@ import Connection from "./Components/Connection";
 import { Navbar } from "./Components/Navbar";
 import Text from "./Components/Text";
 import Button from "./Components/Button";
+import Afficher from "./Components/Afficher";
 
 function App() {
   // State pour savoir quel "page/composant" afficher
@@ -19,7 +20,7 @@ function App() {
 
       <div className="p-4">
         {activePage === "Connection" && <Connection onLogin={handleLogin} />}
-        {activePage === "Accueil" && <h1 className="text-2xl">Bienvenue sur l’accueil</h1>}
+        {activePage === "Accueil" && < Afficher text="Bienvenue sur la page d'accueil" />}
         {activePage === "Ton message" && <Text label="Laisse moi un message "/>}
         {activePage === "Button" && <Button message="Merci bien!" />}
       </div>
